@@ -1,0 +1,11 @@
+{
+    "name": "Flat Iron",
+    "short_name": "FLTI",
+    "icons": [{
+      "src": "google-touch-icon.png",
+      "sizes": "512x512"
+    }],
+    "theme_color": "#44c8f5",
+    "background_color": "#ffffff",
+    "display": "standalone"
+  }
