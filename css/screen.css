@@ -200,10 +200,17 @@ a:focus {
         padding-right: 48px;
     }
 
+    .o-row--md {
+        padding-top: 48px;
+        padding-bottom: 24px;
+    }
+
     .o-row--lg {
         padding-top: 72px;
         padding-bottom: 48px;
     }
+
+
 }
 
 /*
@@ -216,7 +223,7 @@ a:focus {
     margin-left: auto;
     margin-right: auto;
     width: 100%;
-    max-width: 90em;
+    max-width: 56.4em;
     /* 90 * 16px = 1440px */
 }
 
@@ -337,13 +344,163 @@ a:focus {
     align-content: space-between;
 }
 
+
+/*
+    Objects: section
+    ---
+    Creates vertical whitespace between adjacent sections inside a row
+*/
+
+.o-section {
+    display: flow-root;
+    /* Prevent margin collapsing*/
+}
+
+.o-section+.o-section {
+    margin-top: 24px;
+}
+
+@media (min-width: 768px) {
+
+    .o-section--lg+.o-section--lg,
+    .o-section--xl+.o-section--xl {
+        margin-top: 48px;
+    }
+
+    /* Als twee o-section larges op elkaar volgen, zet deze margin op 48px */
+}
+
+@media (min-width: 1200px) {
+    .o-section--xl+.o-section--xl {
+        margin-top: 72px;
+    }
+}
+
+
 /*------------------------------------*\
   #COMPONENTS
 \*------------------------------------*/
 
+/*
+    Component: header
+    ---
+    Main header of the website
+*/
+
+.c-header__nav {
+    display: none;
+}
+
+@media (min-width: 892px) {
+    .c-header {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .c-header__nav {
+        display: block;
+    }
+}
+
+/*
+    Component: Logo
+    ---
+    Website main logo
+*/
+
+.c-logo {
+    height: 32px;
+}
+
+.c-logo__svg {
+    height: 100%;
+}
+
+@media (min-width: 768px) {
+    .c-logo__symbol {
+        height: 40px;
+    }
+}
+
+/*
+    Objects: List
+    ---
+    Small reusable object to remove default list styling from lists
+*/
+
+.o-list-reset {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+/*
+    Component: Nav
+    ---
+    Main navigation of the site
+*/
+
+.c-nav {
+    font-size: 18px;
+    line-height: 24px;
+}
+
+.c-nav--meta {
+    font-size: 16px;
+}
+
+.c-nav__link {
+    display: block;
+    text-decoration: none;
+    padding: 8px 0;
+    /* Er voor te zorgen als gebruiker klein beetje meer plek om op te kliken --> Padding werkt niet omdat inline element is --> Display block */
+}
+
+.c-nav__link,
+.c-nav__link:visited,
+.c-nav__link:active {
+    color: #202024
+}
+
+.c-nav__link--meta,
+.c-nav__link--meta:visited,
+.c-nav__link--meta:active {
+    color: #6c6c75
+}
+
+.c-nav__link.is-selected,
+.c-nav__link:hover,
+.c-nav__link:focus {
+    color: #5051DB;
+}
+
+@media (min-width: 768px) {
+    .c-nav__list {
+        display: flex;
+        gap: 32px;
+    }
+
+    .c-nav__link {}
+}
+
+.c-nav__link--selected {}
+
+
+
 /*------------------------------------*\
   #UTILITIES
 \*------------------------------------*/
+
+/*
+    Utilities: spacing
+    ---
+    Utility classes to put specific margins and paddings onto elements
+*/
+
+.u-pt-clear {
+    padding-top: 0 !important;
+}
+
 
 /*
     Utilities: max-width
@@ -617,6 +774,7 @@ a:focus {
         flex-basis: calc(100% / 6 * 5) !important;
     }
 }
+
 
 /*------------------------------------*\
   #MEDIA
