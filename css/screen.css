@@ -209,6 +209,7 @@ a:focus {
 
 .o-row--lg {
     padding: 48px 24px 24px;
+
 }
 
 @media (min-width: 768px) {
@@ -379,7 +380,6 @@ a:focus {
 }
 
 @media (min-width: 768px) {
-
     .o-section--lg+.o-section--lg,
     .o-section--xl+.o-section--xl {
         margin-top: 48px;
@@ -471,6 +471,7 @@ a:focus {
 .c-nav__link {
     display: block;
     text-decoration: none;
+    font-weight: 400;
     padding: 8px 0;
     /* Er voor te zorgen als gebruiker klein beetje meer plek om op te kliken --> Padding werkt niet omdat inline element is --> Display block */
 }
@@ -481,28 +482,28 @@ a:focus {
     color: #202024
 }
 
-.c-nav__link--meta,
-.c-nav__link--meta:visited,
-.c-nav__link--meta:active {
-    color: #6c6c75
-}
-
 .c-nav__link.is-selected,
 .c-nav__link:hover,
 .c-nav__link:focus {
     color: #5051DB;
 }
 
+.c-nav__link--meta,
+.c-nav__link--meta:visited,
+.c-nav__link--meta:active {
+    color: #6c6c75
+}
+
 @media (min-width: 768px) {
     .c-nav__list {
         display: flex;
-        gap: 32px;
+        gap: 32px; /* Wit ruite tussen de items */ 
     }
 
     .c-nav__link {}
 }
 
-.c-nav__link--selected {}
+
 
 
 
@@ -526,6 +527,8 @@ a:focus {
     ---
     Utility classes to put specific max widths onto elements
 */
+
+/* Maxiumum breedte zetten */ 
 
 .u-max-width-xs {
     max-width: 18em !important;
