@@ -37,8 +37,6 @@
 
 
 
-
-
 html {
     font-size: 16px;
     line-height: 1.5;
@@ -231,6 +229,12 @@ a:focus {
 
 }
 
+..o-row—neutral-x-light {
+    background-color: #F7F7F7;
+}
+
+
+
 /*
     Objects: Container
     ---
@@ -363,6 +367,10 @@ a:focus {
     align-content: space-between;
 }
 
+.item_align_self {
+    align-self: flex-start;
+}
+
 
 /*
     Objects: section
@@ -380,6 +388,7 @@ a:focus {
 }
 
 @media (min-width: 768px) {
+
     .o-section--lg+.o-section--lg,
     .o-section--xl+.o-section--xl {
         margin-top: 48px;
@@ -497,13 +506,12 @@ a:focus {
 @media (min-width: 768px) {
     .c-nav__list {
         display: flex;
-        gap: 32px; /* Wit ruite tussen de items */ 
+        gap: 32px;
+        /* Wit ruite tussen de items */
     }
 
     .c-nav__link {}
 }
-
-
 
 
 
@@ -528,7 +536,7 @@ a:focus {
     Utility classes to put specific max widths onto elements
 */
 
-/* Maxiumum breedte zetten */ 
+/* Maxiumum breedte zetten */
 
 .u-max-width-xs {
     max-width: 18em !important;
