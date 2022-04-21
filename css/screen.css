@@ -407,6 +407,8 @@ a:focus {
 }
 
 
+
+
 /*------------------------------------*\
   #COMPONENTS
 \*------------------------------------*/
@@ -518,6 +520,88 @@ a:focus {
 
 .c-nav__list--gap-lg {
     gap: 48px !important;
+}
+
+
+/*
+    Component: footer
+    ---
+    Main footer of the website
+*/
+
+.c-footer {
+    font-size: 18px;
+    line-height: 24px;
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.c-footer__logo {
+    height: 32px;
+}
+
+@media (min-width: 320px) {
+    .c-footer__nav__1 {
+        width: 100%;
+    }
+
+    .c-footer_linkitems {
+        display: flex;
+        padding-right: 20px;
+    }
+}
+
+@media (min-width: 768px) {
+    .c-footer {
+        display: flex;
+        justify-content: center;
+    }
+
+    .c-footer__nav__1 {
+        order: 0;
+        display: flex;
+        justify-content: center;
+    }
+
+    .c-footer__nav__2 {
+        order: 1;
+    }
+
+    .c-footer__nav__3 {
+        order: 2;
+    }
+
+
+}
+
+@media (min-width: 992px) {
+    .c-footer {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+
+        border-style: solid;
+        border-color: #ff780a;
+    }
+
+    .c-footer__nav__1 {
+        order: 1;
+        width: auto;
+        display: block;
+    }
+
+    .c-footer__nav__2 {
+        order: 0;
+        display: block;
+    }
+
+    .c-footer__nav__3 {
+        order: 2;
+        display: block;
+    }
+
 }
 
 
@@ -652,15 +736,15 @@ a:focus {
 .c-link-cta--inverse,
 .c-link-cta--inverse:visited,
 .c-link-cta--inverse:active {
-    color: #F7F7F7;
+    color: #F7F7F7 !important;
 }
 
 .c-link-cta--inverse::after {
-    background-color: #F7F7F7;
+    background-color: #F7F7F7 !important;
 }
 
 .c-link-cta--inverse:hover::after {
-    color: #F7F7F7;
+    color: #F7F7F7 !important;
 }
 
 
@@ -677,6 +761,10 @@ a:focus {
 
 .u-pt-clear {
     padding-top: 0 !important;
+}
+
+.u-mgb-clear {
+    padding-bottom: 0 !important;
 }
 
 
